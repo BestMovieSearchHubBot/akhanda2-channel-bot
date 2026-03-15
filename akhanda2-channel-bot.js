@@ -266,33 +266,33 @@ async function sendRandomPost() {
  * For simplicity, we keep UTC times as is.
  */
 
-// Morning post (9:00 AM UTC)
-cron.schedule('0 9 * * *', () => {
-  console.log('⏰ Scheduled: 9:00 AM UTC');
+// 8:00 AM IST (2:30 AM UTC)
+cron.schedule('30 2 * * *', () => {
+  console.log('⏰ Scheduled: 8:00 AM IST');
   sendRandomPost();
 });
 
-// Afternoon post (1:00 PM UTC)
-cron.schedule('0 13 * * *', () => {
-  console.log('⏰ Scheduled: 1:00 PM UTC');
+// 12:00 PM IST (6:30 AM UTC)
+cron.schedule('30 6 * * *', () => {
+  console.log('⏰ Scheduled: 12:00 PM IST');
   sendRandomPost();
 });
 
-// Evening post (5:00 PM UTC)
-cron.schedule('0 17 * * *', () => {
-  console.log('⏰ Scheduled: 5:00 PM UTC');
+// 3:00 PM IST (9:30 AM UTC)
+cron.schedule('30 9 * * *', () => {
+  console.log('⏰ Scheduled: 3:00 PM IST');
   sendRandomPost();
 });
 
-// Night post (8:00 PM UTC)
-cron.schedule('0 20 * * *', () => {
-  console.log('⏰ Scheduled: 8:00 PM UTC');
+// 6:00 PM IST (12:30 PM UTC)
+cron.schedule('30 12 * * *', () => {
+  console.log('⏰ Scheduled: 6:00 PM IST');
   sendRandomPost();
 });
 
-// Late night post (11:00 PM UTC)
-cron.schedule('0 23 * * *', () => {
-  console.log('⏰ Scheduled: 11:00 PM UTC');
+// 9:00 PM IST (3:30 PM UTC)
+cron.schedule('30 15 * * *', () => {
+  console.log('⏰ Scheduled: 9:00 PM IST');
   sendRandomPost();
 });
 
@@ -306,7 +306,7 @@ bot.launch().catch((err) => {
 console.log('🤖 Akhanda 2 Channel Bot started!');
 console.log(`📢 Channel: ${CHANNEL_USERNAME}`);
 console.log(`🔗 Main Bot: ${MAIN_BOT_USERNAME}`);
-console.log('⏰ Scheduled posts at: 9AM, 1PM, 5PM, 8PM, 11PM UTC');
+console.log('⏰ Scheduled posts at (IST): 8AM, 12PM, 3PM, 6PM, 9PM daily');
 
 // Send a test post 1 minute after startup to verify everything works
 setTimeout(() => {
